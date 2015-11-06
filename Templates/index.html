@@ -9,6 +9,50 @@
   </head>
   <body>
     <div id="container">
+      <div id="gold">
+        <h4>Your Gold:</h4>
+        <h4 class='feedback'>0 Gold Pieces</h4>
+      </div>
+      <div>
+        <div class="location">
+          <h2>Farm</h2>
+          <p class='safe'>(earn 10 - 20 gold)</p>
+          <form activity='/' method='post'>
+            <input type='hidden' name='place' value='farm'>
+            <input class='btn' type='submit' value='Find Gold!'>
+          </form>
+        </div>
+        <div class="location">
+          <h2>Cave</h2>
+          <p class='safe'>(earn 5 - 10 gold)</p>
+          <form activity='/' method='post'>
+            <input type='hidden' name='place' value='cave'>
+            <input class='btn' type='submit' value='Find Gold!'>
+          </form>
+        </div>
+        <div class="location">
+          <h2>House</h2>
+          <p class='safe'>(earn 2 - 5 gold)</p>
+          <form activity='/' method='post'>
+            <input type='hidden' name='place' value='house'>
+            <input class='btn' type='submit' value='Find Gold!'>
+          </form>
+        </div>
+        <div class="location">
+          <h2>Casino</h2>
+          <p>(luckily win</p>
+          <p>foolishly lose</p>
+          <p> 0 - 50 gold)</p>
+          <form activity='/' method='post'>
+            <input type='hidden' name='place' value='casino'>
+            <input class='btn' type='submit' value='Find Gold!'>
+          </form>
+        </div>
+      </div>
+      <h3>Activities:</h3>
+      <div id="activity" class='feedback'>
+        <p class='win' altclass='lose'>Things will go here.</p>
+      </div>
     </div>
   </body>
 </html>
