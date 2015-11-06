@@ -58,7 +58,9 @@
       </div>
       <h3>Activities:</h3>
       <div id="activity" class='feedback'>
-        <p class='win' altclass='lose'>Things will go here.</p>
+        {% for tuple in session['activity'] %}
+        <p class="{{ tuple[0] }}">{{ tuple[1] }}</p>
+        {% endfor %}
       </div>
     </div>
   </body>

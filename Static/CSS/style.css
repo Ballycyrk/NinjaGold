@@ -23,6 +23,7 @@
   width: 920px;
   height: 205px;
   padding: 10px;
+  overflow-y: auto;
 }
 
 .feedback {
