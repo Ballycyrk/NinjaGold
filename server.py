@@ -1,4 +1,5 @@
 from flask import Flask, session, request, render_template, redirect
+from time import gmtime, strftime
 import random
 app = Flask(__name__)
 app.secret_key = "AineLucia"
@@ -27,12 +28,12 @@ def gold():
 
   if result >= 0:
     temp = 'win'
-    mess = 'You ' + str(abs(result)) + ' gold from the ' + request.form['place'] + '! '
+    mess = 'You ' + str(abs(result)) + ' gold from the ' + request.form['place'] + '! ' + strftime("(%Y/%m/%d %I:%M %p)")
   else:
     temp = 'lose'
-    mess = 'Entered a casino and lost ' + str(abs(result)) + ' gold... will you never learn? '
+    mess = 'Entered a casino and lost ' + str(abs(result)) + ' gold... will you never learn? ' + strftime("(%Y/%m/%d %I:%M %p)")
   result = temp, mess
-  session['activity'].append(result)
+  session['activity'].insert(0, result)
   print mess
   print session['activity']
   print result
