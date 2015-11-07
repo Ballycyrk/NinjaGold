@@ -25,7 +25,6 @@ def gold():
   else:
     result = random.randrange(-50,51)
   session['gold'] += result
-
   if result >= 0:
     temp = 'win'
     mess = 'You ' + str(abs(result)) + ' gold from the ' + request.form['place'] + '! ' + strftime("(%Y/%m/%d %I:%M %p)")
@@ -34,10 +33,6 @@ def gold():
     mess = 'Entered a casino and lost ' + str(abs(result)) + ' gold... will you never learn? ' + strftime("(%Y/%m/%d %I:%M %p)")
   result = temp, mess
   session['activity'].insert(0, result)
-  print mess
-  print session['activity']
-  print result
-  print temp
   return redirect ('/')
 @app.route('/reset')
 def reset():
