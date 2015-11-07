@@ -6,10 +6,10 @@
 
 #container {
   width: 970px;
-  height: 590px;
+  height: 770px;
   margin: 0px auto;
   background-image: url(../Images/gold.png);
-  background-size: 970px 590px;
+  background-size: 970px 700px;
   background-repeat: no-repeat;
 }
 
@@ -24,6 +24,18 @@
   height: 205px;
   padding: 10px;
   overflow-y: auto;
+}
+
+#reset {
+  display: block;
+}
+
+#reset input {
+  width: 325px;
+  height: 55px;
+  font-size: 20px;
+  margin-left: 300px;
+  margin-top: 20px;
 }
 
 .feedback {

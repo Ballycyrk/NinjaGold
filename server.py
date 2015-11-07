@@ -39,4 +39,9 @@ def gold():
   print result
   print temp
   return redirect ('/')
+@app.route('/reset')
+def reset():
+  session.pop('gold')
+  session.pop('activity')
+  return redirect('/')
 app.run(debug=True)
