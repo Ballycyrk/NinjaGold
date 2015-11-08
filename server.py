@@ -27,7 +27,7 @@ def gold():
   session['gold'] += result
   if result >= 0:
     temp = 'win'
-    mess = 'You ' + str(abs(result)) + ' gold from the ' + request.form['place'] + '! ' + strftime("(%Y/%m/%d %I:%M %p)")
+    mess = 'You earned ' + str(abs(result)) + ' gold from the ' + request.form['place'] + '! ' + strftime("(%Y/%m/%d %I:%M %p)")
   else:
     temp = 'lose'
     mess = 'Entered a casino and lost ' + str(abs(result)) + ' gold... will you never learn? ' + strftime("(%Y/%m/%d %I:%M %p)")
